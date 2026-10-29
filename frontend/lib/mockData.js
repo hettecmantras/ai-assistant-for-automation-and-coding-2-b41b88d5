@@ -1,0 +1,5 @@
+export const mockServices = [
+  { _id:'mock-1', name:'Signal Strategy', description:'A clear, practical direction for your next chapter, backed by research and sharp positioning.', price:3200, category:'Strategy', imageUrl:'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80' },
+  { _id:'mock-2', name:'Digital Product Sprint', description:'From rough idea to tested prototype in two focused weeks with a senior product team.', price:6800, category:'Product', imageUrl:'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80' },
+  { _id:'mock-3', name:'Build & Launch', description:'A resilient, high-performing web experience built for momentum, not maintenance.', price:12400, category:'Engineering', imageUrl:'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80' }
+];

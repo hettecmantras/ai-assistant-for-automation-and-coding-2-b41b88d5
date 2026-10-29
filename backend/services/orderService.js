@@ -1,0 +1,2 @@
+import {insertOrder} from '../../database/models/orders';
+export async function saveOrder(input){const items=input.items.map(item=>({name:String(item.name),price:Number(item.price),serviceId:String(item._id)}));if(items.some(i=>!i.name||!Number.isFinite(i.price)||i.price<0))throw new Error('Invalid service selection.');return insertOrder({customer:{name:String(input.customer.name).trim(),email:String(input.customer.email).trim().toLowerCase()},items,total:items.reduce((sum,i)=>sum+i.price,0),status:'received',createdAt:new Date()})}

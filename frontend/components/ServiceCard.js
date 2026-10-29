@@ -1,0 +1,2 @@
+'use client';
+export default function ServiceCard({ service, onAdd }) { return <article className="service-card"><img src={service.imageUrl} alt={service.name} onError={e=>{e.currentTarget.style.visibility='hidden'}}/><div className="service-body"><span className="eyebrow">{service.category}</span><h3>{service.name}</h3><p>{service.description}</p><div className="card-foot"><span className="price">${service.price.toLocaleString()}</span><button className="add" onClick={()=>onAdd(service)}>Add to cart</button></div></div></article>; }

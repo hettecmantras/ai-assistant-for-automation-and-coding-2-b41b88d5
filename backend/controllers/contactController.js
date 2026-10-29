@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';import {saveContact} from '../services/contactService';
+export async function createContact(request){try{const body=await request.json();if(!body.name||!body.email||!body.message)return NextResponse.json({error:'Name, email, and message are required.'},{status:400});await saveContact(body);return NextResponse.json({ok:true},{status:201})}catch(e){return NextResponse.json({error:e.message||'Unable to save enquiry.'},{status:e.message?'400':'503'})}}

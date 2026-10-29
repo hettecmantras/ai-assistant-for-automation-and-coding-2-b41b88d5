@@ -1,0 +1,3 @@
+'use client';
+import Link from 'next/link';
+export default function SiteHeader({ count = 0 }) { return <header className="nav shell"><Link href="/" className="logo">north<span>star</span>®</Link><nav className="navlinks"><Link href="/services">Services</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link></nav><Link href="/checkout" className="navcta">Cart {count ? `(${count})` : ''}</Link></header>; }

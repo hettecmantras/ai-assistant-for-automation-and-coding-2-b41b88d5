@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';import {saveOrder} from '../services/orderService';
+export async function createOrder(request){try{const body=await request.json();if(!body.customer?.name||!body.customer?.email||!Array.isArray(body.items)||!body.items.length)return NextResponse.json({error:'Customer details and at least one service are required.'},{status:400});const order=await saveOrder(body);return NextResponse.json({order},{status:201})}catch(e){return NextResponse.json({error:e.message||'Unable to create order.'},{status:e.message?'400':'503'})}}

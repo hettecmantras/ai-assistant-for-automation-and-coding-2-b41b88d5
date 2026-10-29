@@ -1,0 +1,1 @@
+{"collections":{"services":{"indexes":[{"keys":{"order":1}}]},"contacts":{"indexes":[{"keys":{"createdAt":-1}}]},"orders":{"indexes":[{"keys":{"createdAt":-1}}]}}}

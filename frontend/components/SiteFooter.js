@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function SiteFooter(){return <footer className="footer shell"><span>© 2025 Northstar Systems</span><span><Link href="/about">Built for the next move.</Link></span></footer>}
